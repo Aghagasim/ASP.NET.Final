@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joobsy - Responsive Landing Page Tamplate</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Themesdesign" />
+
+    <link rel="shortcut icon" href="~/Public/images/favicon.ico">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Rubik:400,500" rel="stylesheet">
+
+    @RenderSection("styles", required: false)
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="~/Public/css/bootstrap.min.css" type="text/css">
+
+    <!--Material Icon -->
+    <link rel="stylesheet" type="text/css" href="~/Public/css/materialdesignicons.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/Public/css/fontawesome.css" />
+
+    <!-- selectize css -->
+    <link rel="stylesheet" type="text/css" href="~/Public/css/selectize.css" />
+
+
+
+    <!-- Custom  Css -->
+    <link rel="stylesheet" type="text/css" href="~/Public/css/style.css" />
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar-->
+    <header id="topnav" class="defaultscroll scroll-active">
+        <div class="tagline">
+            <div class="container">
+                <div class="float-left">
+                    <div class="phone">
+                        <i class="mdi mdi-phone-classic"></i> +1 800 123 45 67
+                    </div>
+                    <div class="email">
+                        <a href="~/Public/#">
+                            <i class="mdi mdi-email"></i> Support@mail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <ul class="topbar-list list-unstyled d-flex" style="margin: 11px 0px;">
+                        <li class="list-inline-item"><a href="~/Public/javascript:void(0);"><i class="mdi mdi-account mr-2"></i>Benny Simpson</a></li>
+                        <li class="list-inline-item">
+                            <a href="~/Public/javascript:void(0);">
+                                <select id="select-lang" class="demo-default" placeholder="Language">
+                                    <option value="">Language</option>
+                                    <option value="4">English</option>
+                                    <option value="1">Spanish</option>
+                                    <option value="3">French</option>
+                                    <option value="5">Hindi</option>
+                                </select>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Logo container-->
+            <div>
+                <a href="~/Public/index.html" class="logo">
+                    <img src="~/Public/images/logo-light.png" alt="" class="logo-light" height="28" />
+                    <img src="~/Public/images/logo-dark.png" alt="" class="logo-dark" height="28" />
+                </a>
+            </div>
+            <!-- End Logo container-->
+            <div class="menu-extras">
+
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+
+            <div id="navigation">
+
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu">
+
+                    <li class="has-submenu">
+                        <a href="@Url.Action("index", "home")">Home</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="@Url.Action("JobList","Jobs")">Jobs</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("JobList","Jobs")">Job List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("JobGrid","Jobs")">Job Grid</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("JobDetails","Jobs")">Job Details</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("JobDetails2","Jobs")">Job Details-2</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="@Url.Action("CandidatesListing","Candidates")">Candidates</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("CandidatesListing","Candidates")">Candidates Listing</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("CandidatesProfile","Candidates")">Candidates Profile</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("CreateResume","Candidates")">Create Resume</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="@Url.Action("EmployersList","Employers")">Employers</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("EmployersList","Employers")">Employers List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("CompanyDetail","Employers")">Company Detail</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="@Url.Action("BlogDetails","Blog")">Blog</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("BlogDetails","Blog")">Blog List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("BlogGrid","Blog")">Blog Details</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("BlogList","Blog")">Blog Grid</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="@Url.Action("AboutUs","Pages")">Pages</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("AboutUs","Pages")">About us</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Services","Pages")">Services</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Team","Pages")">Team</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Faqs","Pages")">Faqs</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("PricingPlans","Pages")">Pricing plans</a>
+                            </li>
+                            <li>
+                                <a href="#ModalCenter" class="nav-link" data-toggle="modal" data-target="#ModalCenter">Log in</a>
+                            </li>
+                            <li>
+                                <a href="#ModalCenter1" class="nav-link" data-toggle="modal" data-target="#ModalCenter1">Register</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="@Url.Action("Contact","Contact")">contact</a>
+                    </li>
+                    <a href="@Url.Action("PostJob","PostJob")" class="btn btn-custom btn-sm"><i class="mdi mdi-cloud-upload"></i> Post a Job</a>
+
+                </ul>
+                <!-- End navigation menu-->
+            </div>
+        </div>
+    </header>
+    @RenderBody()
+
+    <!-- footer start -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="text-dark">
+                        <h3 class="mb-4 footer-list-title text-white f-17">Joobsy</h3>
+                        <p class="footer-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                        <ul class="footer-icons list-inline mb-4">
+                            <li class="list-inline-item"><a href="~/Public/#" class=""><i class="mdi mdi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="~/Public/#" class=""><i class="mdi mdi-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="~/Public/#" class=""><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="~/Public/#" class=""><i class="mdi mdi-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">Company</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="~/Public/#">About Us</a></li>
+                                    <li><a href="~/Public/#">Media & Press</a></li>
+                                    <li><a href="~/Public/#">Career</a></li>
+                                    <li><a href="~/Public/#">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">Resources</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="~/Public/#">Help & Support</a></li>
+                                    <li><a href="~/Public/#">Privacy Policy</a></li>
+                                    <li><a href="~/Public/#">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">More Info</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="~/Public/#">Pricing</a></li>
+                                    <li><a href="~/Public/#">For Marketing</a></li>
+                                    <li><a href="~/Public/#">For CEOs </a></li>
+                                    <li><a href="~/Public/#">For Agencies</a></li>
+                                    <li><a href="~/Public/#">Our Apps</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">Help center</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="~/Public/#">Accounting </a></li>
+                                    <li><a href="~/Public/#">Billing</a></li>
+                                    <li><a href="~/Public/#">General Question</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- footer-alt start -->
+    <section class="footer-alt pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="copyright mb-0">2019 © Joobsy. Design By Themesdesign</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer-alt end -->
+    <!-- javascript -->
+    <script src="~/Public/js/jquery.min.js"></script>
+    <script src="~/Public/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/Public/js/plugins.js"></script>
+
+    <!-- selectize js -->
+    <script src="~/Public/js/selectize.min.js"></script>
+    <script src="~/Public/js/jquery.nice-select.min.js"></script>
+
+ 
+    @*<script src="~/Public/js/counter.int.js"></script>*@
+
+    <script src="~/Public/js/app.js"></script>
+   
+
+    @RenderSection("scripts", required: false)
+
+</body>
+
+</html>
